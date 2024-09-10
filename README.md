@@ -23,6 +23,6 @@ A modern and responsive chat user interface built with React and Chakra UI.
 1.**Clone the repository**:
 
   `git clone https://github.com/your-username/react-chat-ui.git`
-   `cd react-chat-ui`
+   `cd chat-ui`
    `npm install`
    `npm start`
