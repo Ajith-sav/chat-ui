@@ -7,12 +7,20 @@ import {
   TabPanel,
   TabPanels,
   Tab,
-} from "@chakra-ui/react";
-import React from "react";
-import Login from "../components/Authentication/Login";
-import SignUp from "../components/Authentication/Signup";
+} from '@chakra-ui/react';
+import React, { useEffect } from 'react';
+import Login from '../components/Authentication/Login';
+import SignUp from '../components/Authentication/Signup';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('userInfo'));
+    if (user) navigate('/chats');
+  });
+
   return (
     <>
       <Container maxW="xl" centerContent>
@@ -20,14 +28,14 @@ const HomePage = () => {
           d="flex"
           justifyContent="center"
           p={3}
-          bg={"white"}
+          bg={'white'}
           w="100%"
           m="40px 0 15px 0"
           borderRadius="1g"
           borderWidth="1px"
         >
           <Text
-            textAlign={"center"}
+            textAlign={'center'}
             fontSize="4xl"
             fontFamily="SUSE"
             sans-serif
@@ -37,23 +45,23 @@ const HomePage = () => {
           </Text>
         </Box>
         <Box
-          bg={"white"}
-          w={"100%"}
+          bg={'white'}
+          w={'100%'}
           p={4}
-          borderRadius={"1g"}
-          borderWidth={"1px"}
+          borderRadius={'1g'}
+          borderWidth={'1px'}
         >
           <Tabs variant="soft-rounded" colorScheme="blue">
-            <TabList mb={"1em"}>
-              <Tab width={"50%"}>Login</Tab>
-              <Tab width={"50%"}>Sign Up</Tab>
+            <TabList mb={'1em'}>
+              <Tab width={'50%'}>Login</Tab>
+              <Tab width={'50%'}>Sign Up</Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
-                <Login/>
+                <Login />
               </TabPanel>
               <TabPanel>
-                <SignUp/>
+                <SignUp />
               </TabPanel>
             </TabPanels>
           </Tabs>

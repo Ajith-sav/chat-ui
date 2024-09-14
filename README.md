@@ -22,7 +22,7 @@ A modern and responsive chat user interface built with React and Chakra UI.
 
 1.**Clone the repository**:
 
-  `git clone https://github.com/Ajith-sav/chat-ui.git`<br>
-   `cd chat-ui`<br>
-   `npm install`<br>
-   `npm start`<br>
+`git clone https://github.com/Ajith-sav/chat-ui.git`<br>
+`cd chat-ui`<br>
+`npm install`<br>
+`npm start`<br>
